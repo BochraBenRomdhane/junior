@@ -3,10 +3,10 @@ import "../style.css"
 const OneProduct = ({ products, deleteItem, getvalues }) => {
     console.log("product", products)
     return (
-        <div className="d-flex flex-wrap gap-3" style={{ marginLeft: '5em', marginRight: "5em" }} >
+        <div className="d-flex flex-wrap gap-3 " style={{ justifyContent: 'center', alignItems: 'center', marginTop: "2.5em" }} >
             {products.map((product, i) => {
                 return (
-                    <div className="card col-md-4 col-sm-6 col-12" style={{ margin: '1em', width: '300px' }} key={i}>
+                    <div className="card " style={{ margin: '1em', width: '300px' }} key={i}>
                         <img
                             className="card-img-top img-fluid"
                             src={product.imageUrl}

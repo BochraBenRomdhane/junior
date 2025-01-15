@@ -20,6 +20,15 @@ module.exports = {
             throw err
         }
     },
+    getAllByCategory: async (req, res) => {
+        try {
+            const products = await Product.findAll({ where: { categoryId: req.params.id } })
+            res.status(200).send(products)
+        } catch (err) {
+            res.status(400).send({ message: "refused" })
+            throw err
+        }
+    },
     OneProduct: async (req, res) => {
         try {
             const product = await Product.findByPk(req.params.id)

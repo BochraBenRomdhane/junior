@@ -18,7 +18,7 @@ module.exports = {
             const category = await Category.findAll({
                 include: { model: Product },
             })
-            res.status(200).send({ message: "created successfelly", category })
+            res.status(200).send(category)
         } catch (err) {
             res.status(400).send({ message: "refused" })
             throw err
@@ -26,8 +26,8 @@ module.exports = {
     },
     OneCategory: async (req, res) => {
         try {
-            const category = await Category.findByPk(req.params.id)
-            res.status(200).send(category)
+            await Category.findOne({ where: { id: req.params.id } })
+                .then((resulta) => res.status(200).send(resulta))
         } catch (err) {
             res.status(400).send({ message: "Not found" })
             throw err

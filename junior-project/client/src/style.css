@@ -1,1 +1,101 @@
-/* .card {} */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.btn-add {
+    margin-left: 100px;
+    font-size: 16px;
+}
+
+.btn-update {
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: rgb(250, 226, 223);
+    padding: 10px;
+    margin-top: 80px;
+}
+
+.text {
+    color: black;
+}
+
+.gitimg {
+    margin: 3px;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-width: 2px;
+    border-color: rgb(109, 109, 109);
+    background-color: transparent;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Button style */
+.dropdown-btn {
+    padding: 10px 20px;
+    background-color: #abadab;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 1ch;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 2ch;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-btn {
+    background-color: #3e8e41;
+}

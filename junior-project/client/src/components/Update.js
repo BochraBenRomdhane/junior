@@ -4,10 +4,12 @@ const UpdateProduct = ({ id, Cname, Cprice, CimageUrl, Cquantity, Update }) => {
     const [price, setPrix] = useState(Cprice)
     const [imageUrl, setimg] = useState(CimageUrl)
     const [quantity, setQuantity] = useState(Cquantity)
-    console.log("name", name)
+    const [categoryId, setCategory] = useState(id)
+    console.log("iddddd", categoryId)
+    console.log("name hello from update", name)
     console.log("price", price)
     return (
-        <div className="container mt-4">
+        <div className="container">
             <div className="form-group mb-3">
                 <label htmlFor="productName">Product Name</label>
                 <input
@@ -51,7 +53,16 @@ const UpdateProduct = ({ id, Cname, Cprice, CimageUrl, Cquantity, Update }) => {
                     onChange={(e) => setQuantity(e.target.value)}
                 />
             </div>
-            <button className="btn btn-success btn-lg" onClick={() => { Update(id, { name, price, imageUrl, quantity }) }}>Update Now</button>
+            <div className="dropdown">
+                <button className="dropdown-btn">Category</button>
+                <div className="dropdown-content" >
+                    <a href="#" onClick={() => setCategory(1)}>Accessory</a>
+                    <a href="#" onClick={() => setCategory(4)}>Parfums</a>
+                    <a href="#" onClick={() => setCategory(2)}>Dress</a>
+                    <a href="#" onClick={() => setCategory(3)}>Shirts</a>
+                </div>
+            </div>
+            <button className="btn-update btn-success btn-lg" onClick={() => { Update(id, { name, price, imageUrl, quantity, categoryId }) }}>Update Now</button>
         </div>
     )
 }
