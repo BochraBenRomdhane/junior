@@ -103,7 +103,7 @@ const App = () => {
       console.log("err", err)
     }
   }
-
+  //function to search category
   const getBycategory = (id) => {
     try {
       axios.get(`http://localhost:3000/product/cat/${id}`)
@@ -112,6 +112,7 @@ const App = () => {
       console.log("err", err)
     }
   }
+  //searching function
   const searching = (search) => {
     if (search.length - 1 === 0) {
       fetch()
